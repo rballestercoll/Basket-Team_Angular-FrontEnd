@@ -1,4 +1,6 @@
 {
+  "name": "Basket Team Angular Movicoders",
+  "version": "1.0.0",
   "dependencies": {
     "bootstrap": "^5.3.3"
   }
