@@ -21,7 +21,7 @@
 <section class="container" >
   <div class="row">
       <article *ngFor="let player of players | filterName:filterSearch:opcion" class="col-sm-6 col-md player-item" >
-              <img src="{{player.img}}" />
+              <img src="{{ player.img }}" />
               <h3>{{player.nombre}} </h3>
               <p *ngIf="!!player.anillos">Anillos NBA: {{player.anillos}}</p>
               <p *ngIf="!player.anillos">Anillos NBA: Ninguno</p>
