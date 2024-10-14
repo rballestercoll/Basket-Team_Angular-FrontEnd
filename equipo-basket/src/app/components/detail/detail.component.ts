@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MediaComponent } from '../media/media.component';
-import {PlayersService} from '../service/players.service';
+import {PlayersService} from '../../service/players.service';
 
 @Component({
   selector: 'app-detail-component',

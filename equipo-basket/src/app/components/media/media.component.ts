@@ -1,8 +1,8 @@
-import { Player } from '../model/players';
+import { Player } from '../../model/players';
 import { Component, ViewChild, ElementRef } from "@angular/core";
 import { OnInit, OnDestroy, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {PlayersService} from '../service/players.service';
+import {PlayersService} from '../../service/players.service';
 import { RouterModule } from '@angular/router';
 
 

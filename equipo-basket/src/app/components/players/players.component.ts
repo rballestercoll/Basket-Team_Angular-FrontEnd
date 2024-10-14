@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Player } from '../model/players';
-import {PlayersService} from '../service/players.service';
+import { Player } from '../../model/players';
+import {PlayersService} from '../../service/players.service';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import {FilterNamePipe} from '../pipes/filter-name.pipe';
-import {FilterPositionPipe} from '../pipes/filter-position.pipe';
+import {FilterNamePipe} from '../../pipes/filter-name.pipe';
+import {FilterPositionPipe} from '../../pipes/filter-position.pipe';
 
 
 @Component({

@@ -1,33 +1,37 @@
-<div class="card">
+<div class="card mb-4 shadow-sm">
   <div class="card-body">
-      <div class="row justify-content-center">
-          <div class="col-sm-3">
-              <label>Elige opcion de busqueda de tu jugador</label>
-          </div>
-          <div class="col-sm-1">
-              <select name="opcion" [(ngModel)]="opcion" class="form-control">
-                  <option value="Nombre" selected>Nombre</option>
-                  <option value="Posición">Posición</option>
-                  <option value="Edad">Edad</option>
-                </select>
-          </div>
-          <div class="col-sm-2">
-              <input  type="text" class="form-control" placeholder="Jugador"  name="filterSearch"   [(ngModel)]="filterSearch" >
-          </div>
-        </div>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-sm-3 text-right">
+        <label for="opcion">Elige opción de búsqueda:</label>
+      </div>
+      <div class="col-sm-2">
+        <select name="opcion" [(ngModel)]="opcion" class="form-control" id="opcion">
+          <option value="Nombre" selected>Nombre</option>
+          <option value="Posición">Posición</option>
+          <option value="Edad">Edad</option>
+        </select>
+      </div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" placeholder="Buscar jugador" name="filterSearch" [(ngModel)]="filterSearch">
+      </div>
+    </div>
   </div>
 </div>
 
-<section class="container" >
+<section class="container mt-4">
   <div class="row">
-      <article *ngFor="let player of players | filterName:filterSearch:opcion" class="col-sm-6 col-md player-item" >
-              <img src="{{ player.img }}" />
-              <h3>{{player.nombre}} </h3>
-              <p *ngIf="!!player.anillos">Anillos NBA: {{player.anillos}}</p>
-              <p *ngIf="!player.anillos">Anillos NBA: Ninguno</p>
-              <p>Posición: {{player.posicion}}</p>
-              <p>Edad: {{player.edad}}</p>
-              <button [routerLink]="['player', player.id]" class="btn btn-primary">Ver detalle</button>
-      </article>
+    <article *ngFor="let player of players | filterName:filterSearch:opcion" class="col-sm-6 col-md-4 mb-4">
+      <div class="card player-item h-100 shadow-sm">
+        <img class="card-img-top" [src]="player.img" alt="Imagen de {{player.nombre}}">
+        <div class="card-body">
+          <h3 class="card-title">{{player.nombre}}</h3>
+          <p class="card-text" *ngIf="!!player.anillos">Anillos NBA: {{player.anillos}}</p>
+          <p class="card-text" *ngIf="!player.anillos">Anillos NBA: Ninguno</p>
+          <p class="card-text">Posición: {{player.posicion}}</p>
+          <p class="card-text">Edad: {{player.edad}}</p>
+          <a [routerLink]="['/player', player.id]" class="btn btn-primary btn-block mt-auto">Ver detalle</a>
+        </div>
+      </div>
+    </article>
   </div>
 </section>
