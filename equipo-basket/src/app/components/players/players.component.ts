@@ -5,13 +5,11 @@ import {PlayersService} from '../../service/players.service';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import {FilterNamePipe} from '../../pipes/filter-name.pipe';
-import {FilterPositionPipe} from '../../pipes/filter-position.pipe';
-
 
 @Component({
   selector: 'app-players-component',
   standalone: true,
-  imports: [RouterModule,CommonModule,FormsModule, FilterNamePipe,FilterPositionPipe],
+  imports: [RouterModule,CommonModule,FormsModule, FilterNamePipe],
 
   templateUrl: './players.component.html',
   styleUrl: './players.component.css'

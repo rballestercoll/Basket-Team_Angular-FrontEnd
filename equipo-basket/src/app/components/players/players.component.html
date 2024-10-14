@@ -7,7 +7,7 @@
       <div class="col-sm-2">
         <select name="opcion" [(ngModel)]="opcion" class="form-control" id="opcion">
           <option value="Nombre" selected>Nombre</option>
-          <option value="Posición">Posición</option>
+          <option value="Posicion">Posición</option>
           <option value="Edad">Edad</option>
         </select>
       </div>
@@ -20,7 +20,7 @@
 
 <section class="container mt-4">
   <div class="row">
-    <article *ngFor="let player of players | filterName:filterSearch:opcion" class="col-sm-6 col-md-4 mb-4">
+    <article *ngFor="let player of players | filterName:filterSearch:opcion" class="col-sm-6 col-md-4 mb-4 d-flex justify-content-center">
       <div class="card player-item h-100 shadow-sm">
         <img class="card-img-top" [src]="player.img" alt="Imagen de {{player.nombre}}">
         <div class="card-body">
